@@ -5,11 +5,11 @@ int create_heap(int* a, int n) {
     int exchange = 1;
     int tmp = 0;
 
-    while (exchange) {
+    while (exchange) { 
         exchange = 0;
 
         for (i = n - 1; i > 0; i--) {
-            if (a[i] > a[(i - 1) / 2]) {
+            if (a[i] > a[(i - 1) / 2]) { //构造一个大顶堆，堆本质上也是一个完全二叉树
                 tmp = a[i];
                 a[i] = a[(i - 1) / 2];
                 a[(i - 1) / 2] = tmp;
